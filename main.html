@@ -5,8 +5,34 @@
 <head>
 	<link rel="stylesheet" href="styles.css">
 </head>
+<style>
+#container {
+    margin: 20px;
+    position: relative;  /* Ensures that pseudo-elements are positioned relative to this container */
+}
 
+#container::before,
+#container::after {
+    content: " ";   /* Inserts a blank space before and after the content */
+    color: #f00;    /* Sets the color to red */
+    font-size: 20px; /* Sets the font size to 20px */
+    display: block;  /* Makes the inserted content appear as a block element */
+}
+
+#container::before {
+    content: "Before content: ";  /* Custom text inserted before the main content */
+}
+
+#container::after {
+    content: " After content.";   /* Custom text inserted after the main content */
+}
+</style>
 <body>
+
+	<div id="container">
+    Main content of the container.
+</div>
+
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
 </script>
