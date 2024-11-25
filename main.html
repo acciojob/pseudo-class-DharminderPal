@@ -8,29 +8,32 @@
 <style>
 #container {
     margin: 20px;
-    position: relative;  /* Ensures that pseudo-elements are positioned relative to this container */
-}
-
-#container::before,
-#container::after {
-    content: " ";   /* Inserts a blank space before and after the content */
-    color: #f00;    /* Sets the color to red */
-    font-size: 20px; /* Sets the font size to 20px */
-    display: block;  /* Makes the inserted content appear as a block element */
+    position: relative; /* Needed for absolute positioning of pseudo-elements */
 }
 
 #container::before {
-    content: "Before content: ";  /* Custom text inserted before the main content */
+    content: "Before Content"; /* Text to display before the container */
+    color: #f00; /* Red color */
+    font-size: 20px; /* Font size */
+    position: absolute; /* Positioning the text */
+    top: -30px; /* Adjust this value as needed */
+    left: 0; /* Align to the left of the container */
 }
 
 #container::after {
-    content: " After content.";   /* Custom text inserted after the main content */
+    content: "After Content"; /* Text to display after the container */
+    color: #f00; /* Red color */
+    font-size: 20px; /* Font size */
+    position: absolute; /* Positioning the text */
+    bottom: -30px; /* Adjust this value as needed */
+    left: 0; /* Align to the left of the container */
 }
+
 </style>
 <body>
-
-	<div id="container">
-    Main content of the container.
+	
+<div id="container">
+    This is the main container element
 </div>
 
 	<!-- the entire body must be written by student -->
